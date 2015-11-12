@@ -1,0 +1,14 @@
+pre {
+    height: 34px;
+    padding-top: 7px;
+}
+
+pre.with-empty-label {
+    margin-top: 26px;
+}
+
+.color-indicator {
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 2px 1px #CCC;
+}

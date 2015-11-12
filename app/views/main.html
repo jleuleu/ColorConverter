@@ -1,0 +1,41 @@
+<div ng-controller="MainCtrl" ng-form="form">
+    <h3>Color</h3>
+    <div class="color-indicator" ng-style="{'background-color': hexColor()}"></div>
+    <h3>RGB</h3>
+    <div class="row">
+        <div class="col-sm-3">
+            <pre class="with-empty-label">rgb({{r}},{{g}},{{b}})</pre>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group" ng-class="{'has-error' : form.r.$invalid}">
+                <label for="r">R</label>
+                <input type="number" name="r" ng-model="r" ng-change="rgbChange()" class="form-control" id="r" placeholder="0-255" min="0" max="255">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group" ng-class="{'has-error' : form.g.$invalid}">
+                <label for="g">G</label>
+                <input type="number" name="g" ng-model="g" ng-change="rgbChange()" class="form-control" id="g" placeholder="0-255" min="0" max="255">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group" ng-class="{'has-error' : form.b.$invalid}">
+                <label for="b">B</label>
+                <input type="number" name="b" ng-model="b" ng-change="rgbChange()" class="form-control" id="b" placeholder="0-255" min="0" max="255">
+            </div>
+        </div>
+
+    </div>
+    <h3>HEX</h3>
+    <div class="row">
+        <div class="col-sm-3">
+            <pre>{{ hexColor() }}</pre>
+        </div>
+        <div class="col-sm-3" ng-class="{'has-error' : form.hex.$invalid}">
+            <div class="form-group">
+                <input type="text" name="hex" ng-model="hex" ng-change="hexChange()" class="form-control" id="hex" placeholder="#012345" pattern="^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$">
+            </div>
+        </div>
+
+    </div>
+</div>

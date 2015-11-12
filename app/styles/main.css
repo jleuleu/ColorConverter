@@ -1,6 +1,7 @@
 pre {
     height: 34px;
     padding-top: 7px;
+    padding-bottom: 0;
 }
 
 pre.with-empty-label {
